@@ -1,13 +1,67 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: DinMedium;
+    src: url(./fonts/DIN/DIN\ Medium.ttf);
+}
+@font-face {
+    font-family: DinBold;
+    src: url(./fonts/DIN/DIN\ Alternate\ Black.ttf);
+    font-weight: bold;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+    font-family: DinLight;
+    src: url(./fonts/DIN/DIN\ Light.ttf);
 }
+
+
+
+.font-DinMedium{
+    font-family: DinMedium;
+}
+.font-DinBold{
+    font-family: DinBold;
+}
+.font-DinLight{
+    font-family: DinLight;
+}
+
+
+#header {
+    height: 800px;
+    background: url(../public/Assets/slider3.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.fadeInRight {
+    color: #fff;
+    animation: fadeInRight 1s ease-in-out;
+  }
+
+
+@keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    to {
+      opacity: 1;
+    }
+  }
+.fadeInLeft {
+    color: #fff;
+    animation: fadeInLeft 1s ease-in-out;
+  }
+
+@keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform:  translateX(-100%);
+    }
+    to {
+      opacity: 1;
+    }
+  }
