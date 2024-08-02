@@ -12,6 +12,11 @@
     src: url(./fonts/DIN/DIN\ Alternate\ Black.ttf);
     font-weight: bold;
 }
+@font-face {
+    font-family: DinBold2;
+    src: url(./fonts/DIN/DIN\ Black.ttf);
+    font-weight: bold;
+}
 
 @font-face {
     font-family: DinLight;
@@ -26,6 +31,9 @@
 
 .font-DinBold {
     font-family: DinBold;
+}
+.font-DinBold2 {
+    font-family: DinBold2;
 }
 
 .font-DinLight {
