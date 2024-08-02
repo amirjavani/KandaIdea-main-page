@@ -38,10 +38,10 @@ function Slider() {
     slide.classList.add("hide-right");
     slide.classList.add("fade-out-right");
     setTimeout(() => {
-        nextTitle.classList.remove("hide-down");
-        nextTitle.classList.remove("fade-out-down");
-        slide.classList.remove("hide-right");
-        slide.classList.remove("fade-out-right");
+      nextTitle.classList.remove("hide-down");
+      nextTitle.classList.remove("fade-out-down");
+      slide.classList.remove("hide-right");
+      slide.classList.remove("fade-out-right");
       setMainSlide(sliderList[(mainSlide.index + 1) % 3]);
       setNextSlide(sliderList[(nextlSlide.index + 1) % 3]);
     }, 700);
@@ -55,27 +55,32 @@ function Slider() {
   });
 
   return (
-    <div className="md:mt-20 px-20  flex flex-col gap-9">
+    <div className="px-10 mt-20 sm:px-20  flex flex-col gap-10">
       <div id="next-title" className="flex flex-row   gap-4 ">
         <img src={nextlSlide.nextIconImage} alt="" />
         <p
-          className="font-DinMedium font md:text-4xl text-transparent "
+          className="font-DinMedium  text-3xl md:text-4xl text-transparent "
           style={{ WebkitTextStroke: ".5px white" }}>
           {" "}
           {nextlSlide.title}
         </p>
       </div>
-      <div ></div>
-      <div id="slide">
-      <div  className="flex flex-row   gap-4 ">
-        <img src={mainSlide.iconImage} alt="" />
-        <p
-          className="font-DinMedium font md:text-4xl  "
-          style={{ }}>
-          {" "}
-          {mainSlide.title}
-        </p>
+      <div className="absolute w-7 sm:w-8 right-8 sm:right-14  md:right-28 flex flex-col gap-3 top-[333px] sm:top-[420px] md:top-[455px] " >
+        <img className="" src={mainSlide.numberUrl} alt=""></img>
+        <img className="" src='Assets/8_w.svg' alt=""></img>
+        <img className="cursor-pointer" onClick={()=>newslide()} src={'Assets/arrow_d.svg'} alt=""></img>
       </div>
+      <div id="slide" className="mt-5 md:w-5/6">
+        <div className="flex flex-row   gap-4 ">
+          <img src={mainSlide.iconImage} alt="" />
+          <p className="font-DinMedium text-3xl  md:text-4xl  " style={{}}>
+            {" "}
+            {mainSlide.title}
+          </p>
+        </div>
+        <p className=" sm:pl-5 md:pl-16 text-lg  md:text-xl">
+          {mainSlide.text}
+        </p>
       </div>
     </div>
   );
