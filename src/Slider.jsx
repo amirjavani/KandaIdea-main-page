@@ -65,7 +65,7 @@ function Slider() {
           {nextlSlide.title}
         </p>
       </div>
-      <div className="absolute w-7 sm:w-8 right-8 sm:right-14  md:right-28 flex flex-col gap-3 top-[333px] sm:top-[420px] md:top-[455px] " >
+      <div className="absolute w-7 sm:w-8 right-8 sm:right-14  md:right-28 flex flex-col gap-3 top-[377px] sm:top-[445px] md:top-[464px] " >
         <img className="" src={mainSlide.numberUrl} alt=""></img>
         <img className="" src='Assets/8_w.svg' alt=""></img>
         <img className="cursor-pointer" onClick={()=>newslide()} src={'Assets/arrow_d.svg'} alt=""></img>

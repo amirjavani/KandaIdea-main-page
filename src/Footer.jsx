@@ -3,7 +3,7 @@ import React from "react";
 function Footer() {
   return (
     <div>
-      <div className="grid grid-cols-5 sm:grid-cols-12  md:grid-cols-11 lg:grid-cols-12  font-DinMedium md:col-9  mx-auto">
+      <div className= "relative grid grid-cols-5 sm:grid-cols-12  md:grid-cols-11 lg:grid-cols-12  font-DinMedium md:col-9  mx-auto">
         <img
           className="px-1 left-6 md:left-10 lg:left-20 relative h-[63px]"
           src="Assets/arrows_up.png"

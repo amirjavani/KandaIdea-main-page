@@ -11,7 +11,7 @@ function Header() {
           alt=""
         />
         <div className="flex flex-row  gap-2">
-          <span className="hidden md:block lg:text-xl py-5 font-DinMedium fadeInRight">
+          <span className="hidden md:block lg:text-xl my-auto font-DinMedium fadeInRight">
             Choose Language : En / Fa
           </span>
           <img

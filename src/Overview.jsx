@@ -23,7 +23,7 @@ function Overview() {
       <div className="flex flex-row mt-20 px-6">
         <img
           id="arrow"
-          className="max-h-52 mx-5"
+          className="max-h-52 mx-5 pt-14"
           src="Assets/arrow_down.svg"
           alt=""></img>
         <div className="flex flex-col-reverse md:flex-row gap-5">
@@ -50,7 +50,7 @@ function Overview() {
           />
         </div>
       </div>
-      <div className=" grid grid-cols-12 px-24 my-10">
+      <div className=" grid grid-cols-4 sm:grid-cols-6  lg:grid-cols-12 px-24 my-10">
         <p className="col-span-2 font-DinBold2 text-blue-700 text-[39px] ">530,000</p>
         <p className="col-span-2 font-DinBold2 text-blue-700 text-[39px] ">200,000</p>
         <p className="col-span-2 font-DinBold2 text-blue-700 text-[39px] ">75</p>
