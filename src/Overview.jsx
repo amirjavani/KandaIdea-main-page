@@ -8,8 +8,6 @@ function Overview() {
       overview.classList.remove("invisible");
       overview.classList.add("visible");
       overview.classList.add("fadeInDown");
-    } else {
-      //   overview.classList.remove("fadeInDown");
     }
   };
 
