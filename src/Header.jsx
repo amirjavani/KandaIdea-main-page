@@ -28,6 +28,7 @@ function Header() {
           alt="CEE"></img>
         <span className="font-DinBold relative left-12 sm:left-14  top-9 sm:top-7 leading-6 md:leading-9 text-3xl sm:text-4xl">CREATIVE ENGINEERING EXPERIENCE</span>
       </div>
+      <hr className="relative top-40"></hr>
       <Slider/>
     </div>
   );

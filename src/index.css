@@ -6,6 +6,7 @@
     font-family: DinMedium;
     src: url(./fonts/DIN/DIN\ Medium.ttf);
 }
+
 @font-face {
     font-family: DinBold;
     src: url(./fonts/DIN/DIN\ Alternate\ Black.ttf);
@@ -19,13 +20,15 @@
 
 
 
-.font-DinMedium{
+.font-DinMedium {
     font-family: DinMedium;
 }
-.font-DinBold{
+
+.font-DinBold {
     font-family: DinBold;
 }
-.font-DinLight{
+
+.font-DinLight {
     font-family: DinLight;
 }
 
@@ -39,29 +42,53 @@
 .fadeInRight {
     color: #fff;
     animation: fadeInRight 1s ease-in-out;
-  }
+}
 
 
 @keyframes fadeInRight {
     from {
-      opacity: 0;
-      transform: translateX(100%);
+        opacity: 0;
+        transform: translateX(100%);
     }
+
     to {
-      opacity: 1;
+        opacity: 1;
     }
-  }
+}
+
 .fadeInLeft {
     color: #fff;
     animation: fadeInLeft 1s ease-in-out;
-  }
+}
 
 @keyframes fadeInLeft {
     from {
-      opacity: 0;
-      transform:  translateX(-100%);
+        opacity: 0;
+        transform: translateX(-100%);
     }
+
     to {
-      opacity: 1;
+        opacity: 1;
     }
-  }
+}
+
+
+
+.fade-out-right {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.5s, transform 0.5s;
+}
+.hide-right {
+    opacity: 0;
+    transform: translateX(50px);
+}
+.fade-out-down {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s, transform 0.5s;
+}
+.hide-down {
+    opacity: 0;
+    transform: translateY(20px);
+}

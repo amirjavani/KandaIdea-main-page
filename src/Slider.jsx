@@ -12,45 +12,73 @@ function Slider() {
     },
     {
       index: 1,
-      title: "",
-      nextIconImage: "",
-      iconImage: "",
-      numberUrl: "",
-      text: "",
+      title: "SERVICES & SOLUTIONS",
+      nextIconImage: "Assets/services-ow.svg",
+      iconImage: "Assets/services-w.svg",
+      numberUrl: "Assets/rec_w_2.svg",
+      text: "Over 15 years of experience in engineering services consultancy and with the taking advantage of expert human resources, Kanda Idea provides a wide range of services and solutions and become one of the leading consultants in the region.",
     },
     {
       index: 2,
-      title: "",
-      nextIconImage: "",
-      iconImage: "",
-      numberUrl: "",
-      text: "",
+      title: "RESEARCH & DEVELOPMENT",
+      nextIconImage: "Assets/R&D-ow.svg",
+      iconImage: "Assets/R&D-w.svg",
+      numberUrl: "Assets/rec_w_3.svg",
+      text: "In this contemporary age, science and technology are changing magnificently second by second and being associated with it, is one of the most necessary characteristics that all companies should follow. Kanda Idea put adequate time and effort into researching cutting-edge science and developing the latest technology by several laboratories.",
     },
   ];
   const [mainSlide, setMainSlide] = useState(sliderList[0]);
   const [nextlSlide, setNextSlide] = useState(sliderList[1]);
 
   const newslide = () => {
-    setMainSlide(sliderList[(mainSlide.index + 1) % 3]);
-    console.log(mainSlide);
-    setNextSlide(sliderList[(nextlSlide.index + 1) % 3]);
-    console.log(nextlSlide);
+    const nextTitle = document.getElementById("next-title");
+    nextTitle.classList.add("hide-down");
+    nextTitle.classList.add("fade-out-down");
+    const slide = document.getElementById("slide");
+    slide.classList.add("hide-right");
+    slide.classList.add("fade-out-right");
+    setTimeout(() => {
+        nextTitle.classList.remove("hide-down");
+        nextTitle.classList.remove("fade-out-down");
+        slide.classList.remove("hide-right");
+        slide.classList.remove("fade-out-right");
+      setMainSlide(sliderList[(mainSlide.index + 1) % 3]);
+      setNextSlide(sliderList[(nextlSlide.index + 1) % 3]);
+    }, 700);
   };
 
   useEffect(() => {
     const intervalId = setInterval(() => {
       newslide();
-    }, 5000);
+    }, 4300);
     return () => clearInterval(intervalId);
   });
 
-  return <div>
-    <div className="flex flex-row">
-        <div>
-
-        </div>
+  return (
+    <div className="md:mt-20 px-20  flex flex-col gap-9">
+      <div id="next-title" className="flex flex-row   gap-4 ">
+        <img src={nextlSlide.nextIconImage} alt="" />
+        <p
+          className="font-DinMedium font md:text-4xl text-transparent "
+          style={{ WebkitTextStroke: ".5px white" }}>
+          {" "}
+          {nextlSlide.title}
+        </p>
+      </div>
+      <div ></div>
+      <div id="slide">
+      <div  className="flex flex-row   gap-4 ">
+        <img src={mainSlide.iconImage} alt="" />
+        <p
+          className="font-DinMedium font md:text-4xl  "
+          style={{ }}>
+          {" "}
+          {mainSlide.title}
+        </p>
+      </div>
+      </div>
     </div>
-  </div>;
+  );
 }
 
 export default Slider;
